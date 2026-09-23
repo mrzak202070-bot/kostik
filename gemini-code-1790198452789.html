@@ -32,7 +32,6 @@
     font-size: 16px;
   }
   
-  /* Контейнер пазла */
   .game-container {
     position: relative;
     width: min(760px, 100%);
@@ -80,7 +79,6 @@
     transform: scale(0.95);
   }
 
-  /* Повне зображення після перемоги */
   .full-image {
     position: absolute;
     top: 0;
@@ -102,7 +100,6 @@
     transform: scale(1.02);
   }
 
-  /* Панель кнопок */
   .controls {
     display: flex;
     justify-content: center;
@@ -128,11 +125,6 @@
     transform: translateY(-1px);
   }
 
-  .btn:active {
-    transform: translateY(1px);
-  }
-
-  /* Повідомлення про перемогу */
   .win-message {
     display: none;
     margin-top: 20px;
@@ -159,7 +151,7 @@
 
   <div class="game-container">
     <div class="board" id="board"></div>
-    <img id="fullImage" class="full-image" alt="Зібране зображення">
+    <img id="fullImage" class="full-image" src="photo.jpg" alt="Зібране зображення">
   </div>
 
   <div class="controls">
@@ -173,8 +165,8 @@
 </div>
 
 <script>
-  // Картинка з вашого оригінального файлу
-  const imgSrc = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAwIAAAFeCAYAAAA2b6gdAAAgAElEQVR4Xu3dv44cV37Fce5jrAMRoP0MlhMaECCt32A3EAMahCH7AexAgQIFDLwPsFYgmMEq8MZObAkgYCVeP8N6ASlYP4aMM+szPjz8VVU3NeTM9P1+AALTU1X37+/eW7e6Of2TH3744YcHAAAAAJbyEzYCAAAAwHrYCAAAAAALYiMAAAAALIiNAAAAALAgNgIAAADAgtgIAAAAAAtiIwAAAAAsiI0AAAAAsCA2AgAAAMCC2AgAAAAAC2IjAAAAACyIjQAAAACwIDYCAAAAwILYCAAAAAALYiMAAAAALIiNAAAAALAgNgIAAADAgtgIAAAAAAtiIwAAAAAsiI0AAAAAsCA2AgAAAMCC2AgAAAAAC2IjAAAAACyIjQAAAACwIDYCAAAAwILYCAAAAAALYiMAAAAALIiNAAAAALAgNgIAAADAgtgIAAAAAAtiIwAAAAAsiI0AAAAAsCA2AgAAAMCC2AgAAAAAC2IjAAAAACyIjQAAAACwIDYCAAAAwILYCAAAAAALYiMAAAAALIiNAAAAALAgNgJv4L//+78f/Nmf/dn1a/npT3/64A9/+MP1a1yWP/mTP3nwP//zP69U6ne/+92DP/3TP71+fdf94he/ePCb3/zmlWL+6le/evC3f/u3168v0V/8xV88+Mu//MsH//iP/3hvqrc3x/z7v//7g7/6q7968MMPP1wfu2vexnj5h3/4hwe//OUvr1+3v//7v79XfXzf3MdxhMu2N0/idGwEzqTAe/z4MYG2EN3UfPvttz/qJua2aRPwwQcfXPxN/yW473PMuxgvvgH4sZsLAGfTfZ8n75KL2wj85Cc/ea19p8ViemIlfkLaT0/99E1PpR49evTg888/v77+5z//+YN/+Zd/ufpZepd69KRqetKlcigfPfnL8utp4GefffbgP//zP6/q+v7771/93Aujy+9yZ319zZat8k9PIpWuNkau/9T+zm+6Puraf/u3f3vws5/97Oq12uU//uM/rsu6Va4te2XptLsPXEaV+csvv7z62fHQTxz28uk6+7Vlffd03SXL0U/r/umf/unB3/3d313Hg/pJcaPfWcZV119U5i6/KK+HDx++EvNpag/nlX2sdH77299epd3lV/yK8+j+cv1srx0z7U5Hskxb5ZO9PKf2kyldUf20uZyeXCmtvTmm+6TTdl/7nR7XX/XuftMx5eNr7U3nx1PGS8fy0Tie9HxnHUc9DtoUq25rx4ooDqTfQevrXZeuo3Q7OL5SlrOP783bPrfrqfJlvl2ubPujsdFt27q8kuXZGz9OO8dQ12VrDet0Xd9TOY8lnpeNrdPt02nnelOaTmmeuxKrqHT8W73bue9uGhdbun7F3Gc5DG3s/ttaw7o8rpO6s+PP/745DlIprZ0/qrLOfOk9P2KdQyZYunFixcnp2M5L+ScsVefqQyuj/vcZcg5vvtl6mOXoePY/XxRGwEF5nfffXddyQzAaREQNaICSfoTscNrU5w8GfnZlC4YXOS0/EnT55sTqDqHPFxBZHT72uVfz7Z9 airborne05/dGBX434S3B13/0z0z6a/C5rI5E3M3vC18fX7/26mbbqM2++0rm3oDq/zL3j69fe/73p+vL8+Xk+/t2Pqf31d0413009/d2X3/f/9On33+3jSvef6/Nf13f+158fN93fE3+vX2/s9x3L833f076Xrm1+1s1917fvv+u2++vW8+P/93vA+O/v+T0R3435+n5++72+e66vP/3/13/2f+f/z5/fX9u/+v+/eS4/428f5+O70eO5/85Xv+2P9e+N8eO9+fHx99sY79/jO//+9v2fE2v7628833u++L5/+v09O356/3c+/33eP+89vj+/x/fvx39+v+/n/268/70/4+/u3f/eX9/vx383jvfe/e934//74e+8+1u+/+e5/733f3833x///x///e8/++L3eN//9/m/j+eN443v++/9x9/4vv+N99e/39vne++O97///b/v/ff//x393vv//+f/x+///5/f3//323f//ff/+e42/2/3//f89/73/++/++/+/vve++/f//f9++/7vff+/v/+/fvv+/+/vvv/v///+//3/f/e7v/9+//7///+f//f7+/+///v///9/++/7/vv/++43//ff/9////3379//++/v443/7/vv///ffv3/337///v/3///+/ff++/f///f/fvv3373////v37777//vvvf/f/fe//f7//+8A==";
+  // Указываем имя вашего файла картинки
+  const imgSrc = "photo.jpg";
 
   const rows = 4;
   const cols = 4;
@@ -185,9 +177,6 @@
   const fullImage = document.getElementById('fullImage');
   const winMessage = document.getElementById('winMessage');
 
-  // Встановлюємо фонове зображення для фінального кадру
-  fullImage.src = imgSrc;
-
   function initGame() {
     board.innerHTML = '';
     tiles = [];
@@ -196,12 +185,10 @@
     winMessage.style.display = 'none';
     board.style.opacity = '1';
 
-    // Створюємо масив з правильними індексами
     for (let i = 0; i < rows * cols; i++) {
       tiles.push(i);
     }
 
-    // Перемішуємо
     shuffleArray(tiles);
     renderBoard();
   }
@@ -213,7 +200,6 @@
       tile.className = 'tile';
       tile.dataset.currentIndex = currentIndex;
       
-      // Обчислюємо позицію фону для кожного елемента
       const x = (correctIndex % cols) * (100 / (cols - 1));
       const y = Math.floor(correctIndex / cols) * (100 / (rows - 1));
       
@@ -235,7 +221,6 @@
       tileElements[index].classList.remove('selected');
       selectedTile = null;
     } else {
-      // Міняємо місцями
       const temp = tiles[selectedTile];
       tiles[selectedTile] = tiles[index];
       tiles[index] = temp;
@@ -282,7 +267,6 @@
     }
   }
 
-  // Запуск при завантаженні
   initGame();
 </script>
 
